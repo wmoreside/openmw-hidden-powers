@@ -10,6 +10,8 @@
 - Reimplemented the Serpent birthsign's drain effect in Lua, since that script was also not working in OpenMW.
 - Implemented the previously MWSE-exclusive feature that grants powers to NPCs in Lua.
 
+NOT implemented is the feature of unlocking new races by meeting them in game.
+
 ## Requirements
 
 OpenMW 0.49 or above.
