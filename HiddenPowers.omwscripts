@@ -1,2 +1,3 @@
 GLOBAL: scripts/HiddenPowers/global.lua
 MENU: scripts/HiddenPowers/menu.lua
+PLAYER: scripts/HiddenPowers/player.lua
