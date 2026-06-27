@@ -4,13 +4,24 @@
 
 ## Changes from the Original Mods
 
-- Converted all toggle spells to permanent abilities, as they were not working in OpenMW.
-- Changed the slowfall magnitude of Feline Grace from 10 to 1, as the original value was based on tweaks from MCP.
-- Reimplemented the power-unlocking feature in Lua, because the mwscript version would occasionally fail in OpenMW.
-- Reimplemented the Serpent birthsign's drain effect in Lua, since that script was also not working in OpenMW.
-- Implemented the previously MWSE-exclusive feature that grants powers to NPCs in Lua.
+Reimplemented the following mwscript features in Lua:
+
+- Granting racial powers to the player once they reach a specific level.
+- Granting racial powers to high level NPCs.
+- Serpent birthsign's drain effect.
+
+Converted all toggle spells to permanent abilities. This was another mwscript feature that wasn't working in OpenMW, but rather than reimplementing it my preference was simply to turn them into abilities. Night Eye looks good in OpenMW, and if an Argonian really wants to join the temple, they can work around the Puzzle Canal quest by damaging themselves while underwater.
+
+Changed the slowfall magnitude of Feline Grace from 10 to 1, as the original value was based on tweaks from MCP.
 
 NOT implemented is the feature of unlocking new races by meeting them in game.
+
+A couple of misc tweaks unrelated to engine differences:
+
+- Renamed Orc to Orsimer since this is based on the Native Names plugins.
+- Renamed Khajiit to Suthay-raht in the Tamriel Races plugin, for consistency with all of the other Khajiit breeds.
+- Renamed the Imperial's racial power to Star of the West (bug fix).
+- Changed the Ohmes and Cathay-raht racial powers to match the mod's description page (bug fix).
 
 ## Requirements
 
