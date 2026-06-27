@@ -41,6 +41,8 @@ M.tryGrantPower = function()
             "a vision of all that you have become flashes before your eyes. " ..
             "The world slowly comes into focus. You breathe deep, then smile. " ..
             "You have unlocked a new Power!")
+    elseif not eligible and hasSpell(spellId) then
+        spells:remove(spellId)
     end
 end
 
