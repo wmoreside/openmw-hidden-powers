@@ -19,7 +19,7 @@ M.getPlayerLevel = function()
 end
 
 M.getNpcEnabled = function()
-    return getBool(npcSettings, "npcEnabled", true)
+    return getBool(npcSettings, "npcEnabled", false)
 end
 
 M.getNpcLevel = function()
@@ -27,7 +27,7 @@ M.getNpcLevel = function()
 end
 
 M.getGuardEnabled = function()
-    return getBool(guardSettings, "guardEnabled", true)
+    return getBool(guardSettings, "guardEnabled", false)
 end
 
 M.getGuardLevel = function()

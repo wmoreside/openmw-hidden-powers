@@ -36,7 +36,7 @@ I.Settings.registerGroup {
             key = "npcEnabled",
             renderer = "checkbox",
             name = "npcEnabled_name",
-            default = true,
+            default = false,
         },
         {
             key = "npcLevel",
@@ -64,7 +64,7 @@ I.Settings.registerGroup {
             key = "guardEnabled",
             renderer = "checkbox",
             name = "guardEnabled_name",
-            default = true,
+            default = false,
         },
         {
             key = "guardLevel",
