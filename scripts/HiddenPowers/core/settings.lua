@@ -1,3 +1,4 @@
+local async   = require("openmw.async")
 local storage = require("openmw.storage")
 
 
@@ -31,6 +32,18 @@ end
 
 M.getGuardLevel = function()
     return guardSettings:get("guardLevel") or 10
+end
+
+M.subscribePlayer = function(callback)
+    playerSettings:subscribe(async:callback(callback))
+end
+
+M.subscribeNpc = function(callback)
+    npcSettings:subscribe(async:callback(callback))
+end
+
+M.subscribeGuard = function(callback)
+    guardSettings:subscribe(async:callback(callback))
 end
 
 return M
