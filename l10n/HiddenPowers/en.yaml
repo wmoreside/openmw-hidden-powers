@@ -1,0 +1,19 @@
+page_name: "Hidden Powers"
+page_description: "Grant racial powers to the player and NPCs."
+
+player_group_name: "Player"
+player_group_description: "Grant the player a racial power once they reach a specific level."
+
+playerLevel_name: "Level Required"
+
+npc_group_name: "NPCs"
+npc_group_description: "Grant non-guard NPCs a racial power if they meet the level requirement."
+
+npcEnabled_name: "Enabled"
+npcLevel_name: "Level Required"
+
+guard_group_name: "Guards"
+guard_group_description: "Grant guard NPCs a racial power if they meet the level requirement."
+
+guardEnabled_name: "Enabled"
+guardLevel_name: "Level Required"
