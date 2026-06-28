@@ -8,17 +8,6 @@ local settings = require("scripts.HiddenPowers.core.settings")
 
 local M = {}
 
-local attributes = {
-    "strength",
-    "intelligence",
-    "willpower",
-    "agility",
-    "speed",
-    "endurance",
-    "personality",
-    "luck",
-}
-
 local function spellExists(spellId)
     return core.magic.spells.records[spellId] ~= nil
 end
@@ -44,9 +33,13 @@ M.tryApplySerpentCurse = function()
     local spell = core.magic.spells.records[spellId]
     if not spell then return nil end
 
-    for _, attributeId in ipairs(attributes) do
-        local stat = types.Actor.stats.attributes[attributeId](omwself)
-        stat.base = math.max(0, stat.base - 5)
+    for _, effect in pairs(spell.effects) do
+        if effect.id == core.magic.EFFECT_TYPE.DrainAttribute and effect.affectedAttribute then
+            local magnitude = effect.magnitudeMax or effect.magnitudeMin or 0
+            local attributeId = effect.affectedAttribute
+            local stat = types.Actor.stats.attributes[attributeId](omwself)
+            stat.base = math.max(0, stat.base - magnitude)
+        end
     end
 end
 
