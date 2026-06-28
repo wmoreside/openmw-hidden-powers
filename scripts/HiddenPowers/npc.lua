@@ -2,7 +2,7 @@ local I          = require("openmw.interfaces")
 local time       = require("openmw_aux.time")
 local npcManager = require("scripts.HiddenPowers.core.npcManager")
 local settings   = require("scripts.HiddenPowers.core.settings")
-local state      = require("scripts.HiddenPowers.core.state")
+local state      = require("scripts.HiddenPowers.core.npcState")
 
 
 I.AnimationController.addTextKeyHandler("spellcast", function(_, key)

@@ -4,7 +4,7 @@ local types    = require("openmw.types")
 local time     = require("openmw_aux.time")
 local powers   = require("scripts.HiddenPowers.core.powers")
 local settings = require("scripts.HiddenPowers.core.settings")
-local state    = require("scripts.HiddenPowers.core.state")
+local state    = require("scripts.HiddenPowers.core.npcState")
 
 
 local M = {}
