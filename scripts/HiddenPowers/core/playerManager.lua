@@ -26,6 +26,23 @@ local function hasSpell(spellId)
     return false
 end
 
+M.tryApplySerpentCurse = function()
+    local spellId = "serpent curse"
+    if not spellExists(spellId) or not hasSpell(spellId) then return end
+
+    local spell = core.magic.spells.records[spellId]
+    if not spell then return nil end
+
+    for _, effect in pairs(spell.effects) do
+        if effect.id == core.magic.EFFECT_TYPE.DrainAttribute and effect.affectedAttribute then
+            local magnitude = effect.magnitudeMax or effect.magnitudeMin or 0
+            local attributeId = effect.affectedAttribute
+            local stat = types.Actor.stats.attributes[attributeId](omwself)
+            stat.base = math.max(0, stat.base - magnitude)
+        end
+    end
+end
+
 M.tryGrantPower = function()
     local spellId = getSpellId()
     if not spellId or not spellExists(spellId) then return end

@@ -23,6 +23,10 @@ A couple of misc tweaks unrelated to engine differences:
 - Renamed the Imperial's racial power to Star of the West (bug fix).
 - Changed the Ohmes and Cathay-raht racial powers to match the mod's description page (bug fix).
 
+## Known Issues
+
+Just like the original mod, the Serpent birthsign's drain effect will only be applied after character creation.
+
 ## Requirements
 
 OpenMW 0.49 or above.
