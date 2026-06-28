@@ -27,6 +27,13 @@ local function isGuard()
     return string.find(string.lower(record.class), "guard", 1, true) ~= nil
 end
 
+local function isSpellMerchant()
+    local record = types.NPC.record(omwself)
+    if not record then return false end
+    local services = record.servicesOffered
+    return services ~= nil and services.Spells == true
+end
+
 local function hasSpell(spellId)
     for _, spell in pairs(types.Actor.spells(omwself)) do
         if spell.id == spellId then return true end
@@ -35,6 +42,7 @@ local function hasSpell(spellId)
 end
 
 local function isEligible()
+    if isSpellMerchant() then return false end
     local level = types.Actor.stats.level(omwself).current
     if isGuard() then
         return settings.getGuardEnabled() and level >= settings.getGuardLevel()
