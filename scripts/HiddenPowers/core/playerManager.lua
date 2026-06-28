@@ -41,6 +41,12 @@ M.tryApplySerpentCurse = function()
             stat.base = math.max(0, stat.base - magnitude)
         end
     end
+
+    -- Clear the drain effect
+    types.Actor.activeSpells(omwself):add({
+        id = "serpent curse restoration",
+        effects = { 0, 1, 2, 3, 4, 5, 6, 7 },
+    })
 end
 
 M.tryGrantPower = function()
